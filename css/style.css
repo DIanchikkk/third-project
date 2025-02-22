@@ -1,0 +1,183 @@
+:root {
+    --background-color: #000000; 
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Liter", serif;
+}
+
+
+.product-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+ 
+
+.card1 {
+    background-color: #ffffff; 
+    border-radius: 5px 5px 5px 110px;
+    margin: 10px;
+    width: 350px;
+    height: 434px;
+    position: relative;
+    font-family: "Liter", serif;
+    color: #000000; 
+}
+.picture1,
+.picture2 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    /* height: 200px; 
+    position: relative;
+    overflow: visible; */
+    /* зачем тебе позишн тут в целом если ты ничего 
+    дальше не применяешь внутри и нет в этом необходимости как и задовать высоту,
+    а оверфло визибл? оно тебе вообще не нужно  */
+}
+
+.picture1 img,
+.picture2 img {
+    max-width: 100%; 
+    max-height: 100%; 
+}
+/* .info1, 
+.info2{
+    text-align: justify;
+    это свойство в данном случае и не меняет ничего
+} */
+.info1{
+    margin-left: 30px;
+}
+.discount{
+    text-align: end;
+    /* тут нет необходимости во флексах
+    можно просто расположить текст через алайн как сделано выше */
+    /* display: flex;
+    justify-content: end; */
+    color: #777777;
+    text-decoration: line-through;
+    font-size: 18px;
+}
+
+.price1,
+.price2{
+    padding: 30px;
+    /* position: relative; 
+    тут тоже тебе применять это свойство нет смысла*/
+   
+}
+.price1 p,
+.price2 p{
+    color: #8b0000;
+}
+.price p{
+    text-align: end;
+    /* то же самое  что и выше */
+    /* display: flex;
+    justify-content: end; */
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+.card1 h3,
+.card2 h3{
+    font-size: 25px;
+    font-family: "Liter", serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.subtext{
+    margin-top: 20px;
+    color: #777777;
+}
+
+.card2 {
+    background: linear-gradient(to bottom, #ffeb3b, #ffcc00); 
+    border-radius: 5px;
+    margin: 10px;
+    width: 380px;
+    height: 434px;
+    position: relative;
+    font-family: "Liter", serif;
+    color: #000000; 
+}
+.small-photo {
+    position: absolute; 
+    top: -15px;
+    left: -15px;
+    /* height: 80px;
+    width: 80px;  
+    их впринципе указывать смысла нет
+    картинка идет нужного тебе размера*/
+ }
+
+/* .small-photo img {
+    width: 100%;
+    height: auto;
+ } */
+
+
+.info2{
+    margin-left: 40px;
+}
+
+/* .price img {
+    position: absolute; 
+    width: 50px;     
+    height: auto;
+    bottom: 0;         
+    left: 0;           
+    z-index: 2;
+} 
+    а это к чему относится?
+    вроде, не нашла ничего*/
+
+.black-box1,
+.black-box2{
+    background-color: #000000;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: 1; 
+    display: flex;
+    align-items:end;
+    border-radius: 0px 20px 0px 0px;
+}
+
+/* ниже использую псевдоэлементы сделала
+скругление на карточках */
+
+.black-box1::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    border-radius: 0px 0px 10px 0px;
+    transform: rotate(90deg);
+}
+
+.black-box1::before {
+    top: -20px;
+    left: -5px;
+}
+
+.black-box1::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    border-radius: 0px 0px 10px 0px;
+    transform: rotate(90deg);
+    bottom: -5px;
+    left: 95px;
+}
